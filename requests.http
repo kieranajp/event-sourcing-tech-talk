@@ -1,0 +1,19 @@
+### Welcome handler
+GET {{host}}
+
+### Create testkits
+POST {{host}}/testkit
+
+### Sync test
+PUT {{host}}/testkit/{{test_id}}/sync
+Content-Type: application/json
+
+{
+  "account_id": "{{account_id}}"
+}
+
+### Test arrived at lab
+PUT {{host}}/testkit/{{test_id}}/lab
+
+### Get test
+GET {{host}}/testkit/{{test_id}}
